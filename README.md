@@ -21,6 +21,7 @@ Where # is the specific number of jobs, 4 is default, change in accordance to in
 ```
   
 Building the ROM:
+To be able to brunch the device, you must add w5 entry to /vendor/slim/slim.devices!
 
 ```shell
 $ ./build-rom.sh
