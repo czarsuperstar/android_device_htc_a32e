@@ -22,11 +22,5 @@
     "repository":  "SlimRoms/hardware_qcom_audio-caf",
     "target_path": "hardware/qcom/audio-caf",
     "revision":    "kk4.4"
-  },
-  {
-    "remote":      "github",
-    "repository":  "SlimRoms/hardware_qcom_fm",
-    "target_path": "hardware/qcom/fm",
-    "revision":    "kk4.4"
   }
 ]
