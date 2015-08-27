@@ -24,6 +24,8 @@ Install PAC-ROM configuration for w5 (one-time job):
 ```shell
     cd device/lge/w5 && chmod +x preps.sh
     . ./preps.sh
+
+Do not ommit additional dot at the beginning!
 ```
   
 Building the ROM:
