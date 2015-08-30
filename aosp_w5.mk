@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2011 The Android Open Source Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,12 +14,14 @@
 # limitations under the License.
 #
 
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
-#
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, device/lge/w5/device_w5.mk)
 
-#dd_lunch_combo full_mb526-eng
-add_lunch_combo cm_w5-userdebug
+## Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := w5
+PRODUCT_NAME := aosp_w5
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := w5
+PRODUCT_MANUFACTURER := LGE
 
