@@ -1,6 +1,12 @@
 The Android Open Source Project Lollipop 5.1
 --------------------------
-To initialize your local repository using the AOSP trees:
+
+Set working directory:
+```shell
+    mkdir aosp && cd aosp
+```
+
+Initialize your local repository using the AOSP trees:
 ```shell
     repo init -u git://github.com/F-AOSP/manifest.git -b lollipop-5.1
 ```
