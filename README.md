@@ -6,7 +6,7 @@ To initialize your local repository using the AOSP trees:
 ```
 Add LG L70 resources:
 ```shell
-curl --create-dirs -L -o .repo/local_manifests/local_manifest.xml -O -L https://raw.githubusercontent.com/zlaja/android_local_manifest/aosp/local_manifest.xml
+    curl --create-dirs -L -o .repo/local_manifests/local_manifest.xml -O -L https://raw.githubusercontent.com/zlaja/android_local_manifest/aosp/local_manifest.xml
 ```
 Then sync up:
 ```shell
