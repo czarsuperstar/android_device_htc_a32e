@@ -1,6 +1,4 @@
-CyanogenMod 12.0 device configuration for LG L70 D320 D320n D325
-
-How to build:
+Paranoid Android Lollipop 5.1 for LG L70
 -------------
 
 Initializing a Build Environment:
@@ -9,13 +7,16 @@ Initializing a Build Environment:
 
 Initialize repo:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
-
-    curl --create-dirs -L -o .repo/local_manifests/local_manifest.xml -O -L https://raw.githubusercontent.com/vm03/android_local_manifest/cm-12.1/local_manifest.xml
+    repo init -u https://github.com/AOSPA-L/manifest -b lollipop-mr1
+    curl --create-dirs -L -o .repo/local_manifests/local_manifest.xml -O -L https://raw.githubusercontent.com/zlaja/android_local_manifest/aospal/local_manifest.xml
     repo sync
-    vendor/cm/get-prebuilts
+    cd device/lge/w5 && chmod +x preps.sh
 
-Compile:
+Prepare for build:
+(very important, do this the first time, and every time after you sync repos):
 
-    . build/envsetup.sh
-    brunch cm_w5-userdebug
+    . ./preps.sh
+
+Now you can build the ROM:
+
+    ./rom-build.sh w5
