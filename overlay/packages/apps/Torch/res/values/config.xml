@@ -32,5 +32,5 @@
     <!-- Middle setting -->
     <integer name="valueHigh">150</integer>
     <!-- Highest setting, leave -1 if it doesn't exist -->
-    <integer name="valueDeathRay">200</integer>
+    <integer name="valueDeathRay">180</integer>
 </resources>
