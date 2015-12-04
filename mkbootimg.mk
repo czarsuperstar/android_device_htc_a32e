@@ -1,24 +1,24 @@
 LOCAL_PATH := $(call my-dir)
 
-## Don't change anything under here. The variables are named MSM8610_whatever
+## Don't change anything under here. The variables are named MSM8909_whatever
 ## on purpose, to avoid conflicts with similarly named variables at other
 ## parts of the build environment
 
 ## Imported from the original makefile...
 KERNEL_CONFIG := $(KERNEL_OUT)/.config
-MSM8610_DTS_NAMES := msm8610
+MSM8909_DTS_NAMES := msm8909
 
-MSM8610_DTS_FILES = $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8610-w5n_global_com/msm8610-v*-w5n.dts)
+MSM8610_DTS_FILES = $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/qcom/msm8909-1**-.dts)
 MSM8610_DTS_FILE = $(lastword $(subst /, ,$(1)))
-DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call MSM8610_DTS_FILE,$(1))))
-ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(call MSM8610_DTS_FILE,$(1))))
+DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call MSM8909_DTS_FILE,$(1))))
+ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(call MSM8909_DTS_FILE,$(1))))
 KERNEL_ZIMG = $(KERNEL_OUT)/arch/arm/boot/zImage
 DTC = $(KERNEL_OUT)/scripts/dtc/dtc
 
-define append-msm8610-dtb
+define append-msm8909-dtb
 mkdir -p $(KERNEL_OUT)/arch/arm/boot;\
-$(foreach MSM8610_DTS_NAME, $(MSM8610_DTS_NAMES), \
-   $(foreach d, $(MSM8610_DTS_FILES), \
+$(foreach MSM8909_DTS_NAME, $(MSM8909_DTS_NAMES), \
+   $(foreach d, $(MSM8909_DTS_FILES), \
       $(DTC) -p 1024 -O dtb -o $(call DTB_FILE,$(d)) $(d); \
       cat $(KERNEL_ZIMG) $(call DTB_FILE,$(d)) > $(call ZIMG_FILE,$(d));))
 endef
