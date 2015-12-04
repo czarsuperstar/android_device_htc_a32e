@@ -21,16 +21,16 @@
 # definition file).
 #
 
--include device/lge/msm8610-common/BoardConfigCommon.mk
+-include device/lge/msm8909-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := w5n_global_com_defconfig
-BOARD_CUSTOM_BOOTIMG_MK := device/lge/w5/mkbootimg.mk
+TARGET_KERNEL_CONFIG := a32e_defconfig
+BOARD_CUSTOM_BOOTIMG_MK := device/htc/a32e/mkbootimg.mk
 
-TARGET_LIBINIT_DEFINES_FILE := device/lge/w5/init/init_w5.c
+TARGET_LIBINIT_DEFINES_FILE := device/htc/a32e/init/init_w5.c
 
-DEVICE_RESOLUTION := 480x800
+DEVICE_RESOLUTION := 720x1280
 
-TARGET_OTA_ASSERT_DEVICE := w5,w5ds
+TARGET_OTA_ASSERT_DEVICE := a32e
 
 # Nfc
 BOARD_NFC_CHIPSET := pn547
@@ -39,9 +39,9 @@ BOARD_NFC_CHIPSET := pn547
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/lge/w5
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/a32e
 
 # Charger
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/lge/w5/charger/images
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/htc/a32e/charger/images
 
--include vendor/lge/w5/BoardConfigVendor.mk
+-include vendor/htc/a32e/BoardConfigVendor.mk
