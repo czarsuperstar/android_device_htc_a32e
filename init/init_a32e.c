@@ -78,36 +78,22 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     UNUSED(board_type);
 
     property_get("ro.boot.serialno", serial);
-    if (strncmp(serial, "LGD320", 6) == 0) {
-        if (check_cmdline("model.name=LG-D320n") == 1) {
-                property_set("ro.product.device", "w5");
-                property_set("ro.product.model", "LG-D320n");
+    if (strncmp(serial, "HTCA32E", 6) == 0) {
+        if (check_cmdline("model.name=HTC-A32E") == 1) {
+                property_set("ro.product.device", "a32e");
+                property_set("ro.product.model", "HTC-A32E");
                 property_set("ro.nfc.port", "I2C");
         } else {
-                property_set("ro.product.device", "w5");
-                property_set("ro.product.model", "LG-D320");
-        }
-        property_set("ro.build.description", "w5_global_com-user 4.4.2 KOT49I.A1398228431 1398228431 release-keys");
-        property_set("ro.build.fingerprint", "lge/w5_global_com/w5:4.4.2/KOT49I.A1398228431/1398228431:user/release-keys");
+                property_set("ro.product.device", "a32e");
+                property_set("ro.product.model", "HTC-A32E");
+        }     
+        property_set("ro.build.description", "1.23.1550.3 CL637541 release-keys");
+        property_set("ro.build.fingerprint", "htc/a32eul_metropcs_us/htc_a32eul:5.1/LMY47O/637541.3:user/release-keys");
         property_set("persist.radio.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
-    } else if (strncmp(serial, "LGD325", 6) == 0) {
-        property_set("ro.product.device", "w5ds");
-        property_set("ro.product.model", "LG-D325");
-        property_set("ro.build.description", "w5ds_global_com-user 4.4.2 KOT49I.D41510c D41510c.1393916607 release-keys");
-        property_set("ro.build.fingerprint", "lge/w5ds_global_com-user/w5ds:4.4.2/KOT49I.D41510c/D41510c.1393916607:user/release-keys");
-                property_set("persist.radio.multisim.config", "dsds");
-        property_set("telephony.lteOnCdmaDevice", "0");
-    } else if (strncmp(serial, "LGMS323", 7) == 0) {
-        property_set("ro.product.device", "w5");
-        property_set("ro.product.model", "LG-MS323");
-        property_set("ro.build.description", "w5_global_com-user 4.4.2 KOT49I.D41510c D41510c.1393916607 release-keys");
-        property_set("ro.build.fingerprint", "lge/w5_global_com-user/w5ds:4.4.2/KOT49I.D41510c/D41510c.1393916607:user/release-keys");
-        property_set("persist.radio.multisim.config", "");
-        property_set("telephony.lteOnCdmaDevice", "0");
-    } else {
+     } else {
         /* XXX */
-        property_set("ro.product.device", "w5");
+        property_set("ro.product.device", "a32e");
         property_set("ro.product.model", "Please write your model name to vm03@yandex.ru");
         property_set("persist.radio.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
