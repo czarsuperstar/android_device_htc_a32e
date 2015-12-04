@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/htc/a32e" name="czarsuperstar/android_device_htc_a32e" remote="github" revision="aosp" />
+    <project path="device/htc/msm8909-common" name="czarsuperstar/android_device_htc_msm8909-common" remote="github" revision="aosp" />
+    <project path="vendor/htc/a32e" name="czarsuperstar/proprietary_vendor_htc_a32e" remote="github" revision="lp5.1" />
+    <project path="vendor/htc/msm8908-common" name="czarsuperstar/proprietary_vendor_htc_msm8909" remote="github" revision="lp5.1" />
+    <project path="kernel/htc/msm8909" name="czarsuperstar/android_kernel_htc_msm8909" remote="github" revision="lp5.1" />
+    <project name="czarsuperstar/prebuilt_chromium" path="prebuilts/chromium" remote="github" revision="aosp-5.1" />
+
+<!-- Generic msm8909 -->
+    <project name="CyanogenMod/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8909" remote="github" revision="cm-12.1-caf-8974" />
+    <project name="CyanogenMod/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8909" remote="github" revision="cm-12.1-caf-8974" />
+    <project name="CyanogenMod/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8909" remote="github" revision="cm-12.1-caf-8974" />
+</manifest>
+
+    
+
