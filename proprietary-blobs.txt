@@ -1,19 +1,19 @@
 # Audio
-etc/ACDB/Bluetooth_cal.acdb
-etc/ACDB/General_cal.acdb
-etc/ACDB/Global_cal.acdb
-etc/ACDB/Handset_cal.acdb
-etc/ACDB/Hdmi_cal.acdb
-etc/ACDB/Headset_cal.acdb
-etc/ACDB/Speaker_cal.acdb
-etc/ACDB/workspaceFile.qwsp
+etc/acdbdata/MTP/Bluetooth_cal.acdb
+etc/acdbdata/MTP/General_cal.acdb
+etc/acdbdata/MTP/Global_cal.acdb
+etc/acdbdata/MTP/Handset_cal.acdb
+etc/acdbdata/MTP/Hdmi_cal.acdb
+etc/acdbdata/MTP/Headset_cal.acdb
+etc/acdbdata/MTP/Speaker_cal.acdb
+etc/acdbdata/MTP/workspaceFile.qwsp
 
 #NFC
 vendor/firmware/libpn547_fw.so
 
-#Keymaster for ms323
-vendor/firmware/keymaster.ms323/keymaster.b00
-vendor/firmware/keymaster.ms323/keymaster.b01
-vendor/firmware/keymaster.ms323/keymaster.b02
-vendor/firmware/keymaster.ms323/keymaster.b03
-vendor/firmware/keymaster.ms323/keymaster.mdt
+#Keymaster for a32e
+vendor/firmware/keymaster.a32e/keymaster.b00
+vendor/firmware/keymaster.a32e/keymaster.b01
+vendor/firmware/keymaster.a32e/keymaster.b02
+vendor/firmware/keymaster.a2e3/keymaster.b03
+vendor/firmware/keymaster.a32e/keymaster.mdt
