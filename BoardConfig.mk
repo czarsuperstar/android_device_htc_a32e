@@ -26,7 +26,7 @@
 TARGET_KERNEL_CONFIG := a32e_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/a32e/mkbootimg.mk
 
-TARGET_LIBINIT_DEFINES_FILE := device/htc/a32e/init/init_w5.c
+TARGET_LIBINIT_DEFINES_FILE := device/htc/a32e/init/init_a32e.c
 
 DEVICE_RESOLUTION := 720x1280
 
